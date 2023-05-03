@@ -6,14 +6,18 @@
     .card {
         text-align: center;
         max-width: 900px;
-        width: auto;
-        height: auto;
-        padding: 10px 40px 20px 40px;
-        border-radius: 10px;
+        width: 180px;
+        height: 430px;
+        padding: 15px 45px 15px 50px;
+        border-radius: 20px;
         background: #fff;
-        box-shadow: 1px 3px 6px rgba(0, 34, 78, 0.3);
+        box-shadow: 2px 8px 12px rgba(1, 109, 28, 0.336);
 
-        display: grid;
-        place-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        /* linear-gradient(120deg, #17B169,#00693E); */
     }
 </style>

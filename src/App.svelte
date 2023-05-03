@@ -1,8 +1,10 @@
 <script>
 	import Card from "./components/Card.svelte";
 	import Table from "./components/Table.svelte";
+	import Header from "./components/Header.svelte";
 </script>
 
+<Header />
 <main>
 	<Card>
 		<Table />

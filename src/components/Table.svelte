@@ -15,7 +15,7 @@
             prevDisplay = display;
             display = eval(display);
         } else if (display == "" && type == "equate") {
-            display = "Empty: Nothing to Equate";
+            display = "Empty";
             setTimeout(() => (display = ""), 2000);
         } else {
             display += type;
@@ -55,7 +55,9 @@
         <td><button class="btn-number" on:click={() => doMath("0")}>0</button></td>
         <td><button class="btn-operation" on:click={() => doMath("(")}>(</button></td>
         <td><button class="btn-operation" on:click={() => doMath(")")}>)</button></td>
-        <td><button class="btn-operation" on:click={() => doMath("equate")}>=</button></td>
+        <td class="equal-div">
+            <button class="btn-operation" id="equal" on:click={() => doMath("equate")}>=</button>
+        </td>
     </tr>
 </table>
 
@@ -63,12 +65,27 @@
     button {
         height: 50px;
         width: 50px;
-        border-radius: 50px;
+        border-radius: 20px;
         font-size: 18px;
         cursor: pointer;
         border: 0;
         margin: 3px;
         transition: all 0.2s ease;
+        background-color: white;
+    }
+
+    .equal-div {
+        background-color: #defdd2;
+        border-radius: 20px;
+    }
+
+    button#equal {
+        padding: 0 0 5px 0;
+        font-weight: bold;
+        font-size: 25px;
+        background: -webkit-linear-gradient(#9deb7f,#118b59);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     button:hover {
@@ -76,6 +93,11 @@
     }
 
     button:focus {
-        border: 2px solid #17B169;
+        background-color: #defdd2;
+        color: #045e38;
+    }
+
+    button#equal:focus {
+        transform: scale(1.50);
     }
 </style>
